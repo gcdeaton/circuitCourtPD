@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="5f435e72-eebb-440e-8c62-e36d3df6a99a" ChangeDateTime="10/20/2016 22:17:20">
+    <Property Name="ElementName" Value="[dbo].[LoginTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LoginTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="USERNAME" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1472c8e5-62b7-4723-a7e2-f15bc0d25a52" ChangeDateTime="10/20/2016 22:25:18">
+    <Property Name="ElementName" Value="[dbo].[DefendersTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DefendersTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="USERNAME" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6343eedd-2ea8-4d67-bbd5-6f0670dd90bb" ChangeDateTime="10/20/2016 22:28:00">
+    <Property Name="ElementName" Value="[dbo].[StaffTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[StaffTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="USERNAME" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="85699410-4af8-455d-a544-a4a85c448860" ChangeDateTime="10/20/2016 22:32:08">
+    <Property Name="ElementName" Value="[dbo].[LawOfficeTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LawOfficeTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NAME" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4ddd9020-0334-4dfb-9979-b408127771ee" ChangeDateTime="10/20/2016 22:32:18">
+    <Property Name="ElementName" Value="[dbo].[LawOfficeTable].[CONTACT INFO]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[LawOfficeTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EMAIL" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9b84f5e2-35d7-4d1d-b20b-137d97b20039" ChangeDateTime="10/20/2016 22:33:27">
+    <Property Name="ElementName" Value="[dbo].[CaseTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CaseTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CASENUMBER" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="038bddf2-a1c2-45e0-9882-3023eeafe3a7" ChangeDateTime="10/20/2016 22:37:59">
+    <Property Name="ElementName" Value="[dbo].[CaseTable].[LITIGANTS]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[CaseTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LITIGANT" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a5bd0059-db17-4505-824e-0b6edd66bbe4" ChangeDateTime="10/20/2016 22:40:06">
+    <Property Name="ElementName" Value="[dbo].[EditedCasesTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EditedCasesTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CASENUM" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6943bed9-9e39-49df-af1b-a8b5f3c7355e" ChangeDateTime="10/20/2016 22:40:10">
+    <Property Name="ElementName" Value="[dbo].[EditedCasesTable].[CASENUM]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EditedCasesTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CASENUMBER" />
+  </Operation>
+</Operations>
