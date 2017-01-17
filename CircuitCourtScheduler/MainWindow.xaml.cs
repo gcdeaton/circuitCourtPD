@@ -23,6 +23,12 @@ namespace CircuitCourtScheduler
         public MainWindow()
         {
             InitializeComponent();
+            List<Staff> items = new List<Staff>();
+            items.Add(new Staff() { userName = "JohnD", firstName = "John", lastName="Doe", email = "john@doe-family.com" });
+            items.Add(new Staff() { userName = "JaneD", firstName = "Jane", lastName ="Doe", email = "jane@doe-family.com" });
+            items.Add(new Staff() { userName = "SammyD", firstName = "Sammy", lastName ="Doe", email = "sammy.doe@gmail.com" });
+            listView.ItemsSource = items;
+
         }
     }
 }

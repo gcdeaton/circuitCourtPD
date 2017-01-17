@@ -6,7 +6,17 @@
         xmlns:local="clr-namespace:CircuitCourtScheduler"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+
+    <ListView Name="listView">
+        <ListView.View>
+            <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Authors">
+                <GridViewColumn Header="UserName" Width="120" DisplayMemberBinding="{Binding Path=userName}" />
+                <GridViewColumn Header="First Name" Width="50" DisplayMemberBinding="{Binding Path=firstName}" />
+                <GridViewColumn Header="Last Name" Width="250" DisplayMemberBinding="{Binding Path=lastName}" />
+                <GridViewColumn Header="email" Width="50" DisplayMemberBinding="{Binding Path=email}" />
+            </GridView>
+        </ListView.View>
+    </ListView>
+
+
 </Window>
