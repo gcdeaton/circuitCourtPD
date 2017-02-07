@@ -9,34 +9,36 @@
 
     <Grid MinWidth="50" MinHeight="100">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="43*"/>
-            <ColumnDefinition Width="140*"/>
-            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="453*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="68*"/>
-            <RowDefinition Height="216*"/>
-            <RowDefinition Height="73*"/>
+            <RowDefinition/>
+
         </Grid.RowDefinitions>
-        <TabControl x:Name="tabControl" Grid.Column="1" Margin="0,50,0,0" Grid.RowSpan="2">
+        <TabControl x:Name="tabControl" Margin="0,30,0,10" Grid.ColumnSpan="2">
             <TabItem Header="Staff">
-                <DataGrid x:Name="staffDataGrid" Margin="0,0,-1,-1" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                <DataGrid x:Name="staffDataGrid" Margin="135,-2,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                 </DataGrid>
             </TabItem>
             <TabItem Header="Defender">
-                <DataGrid x:Name="defenderDataGrid" Margin="0,0,-1,-1" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                <DataGrid x:Name="defenderDataGrid" Margin="121,-2,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                 </DataGrid>
             </TabItem>
-            <TabItem Header="TabItem">
-                <DataGrid x:Name="dataGrid" Margin="0,0,-1,-1" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+            <TabItem Header="Case">
+                <DataGrid x:Name="caseDataGrid" Margin="121,-2,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                 </DataGrid>
+            </TabItem>
+            <TabItem Header="Edits">
+                <DataGrid x:Name="editsDataGrid" Margin="121,-2,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                </DataGrid>
+            </TabItem>
 
-            </TabItem>
         </TabControl>
-        <Menu x:Name="menu" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Top">
-            <MenuItem Header="MenuItem"/>
-            <MenuItem Header="MenuItem"/>
+        <Menu x:Name="menu" Grid.ColumnSpan="2" Height="20" VerticalAlignment="Top">
+            <MenuItem Header="File"/>
+            <MenuItem Header="Admin"/>
         </Menu>
-        
+
     </Grid>
 </Window>
