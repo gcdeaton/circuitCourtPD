@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CircuitCourtScheduler"
         mc:Ignorable="d"
-        Title="addDefender" Height="300" Width="300">
+        Title="addDefender" Height="453.678" Width="344.141">
     <Grid>
-        
+        <Label x:Name="labelEmail" Content="Email" HorizontalAlignment="Left" Margin="27,17,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="labelFirstName" Content="First Name" HorizontalAlignment="Left" Margin="27,66,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="labelLastName" Content="Last Name" HorizontalAlignment="Left" Margin="27,118,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="labelLawOffice" Content="Law Office" HorizontalAlignment="Left" Margin="27,168,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="labelPhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Margin="27,223,0,0" VerticalAlignment="Top" Width="95"/>
+
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="23" Margin="154,20,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Height="23" Margin="154,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="23" Margin="154,118,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxLawOffice" HorizontalAlignment="Left" Height="23" Margin="154,170,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxPhoneNumber" HorizontalAlignment="Left" Height="23" Margin="154,226,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="buttonAddDefender" Content="Submit" HorizontalAlignment="Left" Margin="28,332,0,0" VerticalAlignment="Top" Width="85"/>
+
     </Grid>
 </Window>
