@@ -26,5 +26,17 @@ namespace CircuitCourtScheduler
             
 
         }
+
+        private void menuItemAddDefender_Click(object sender, RoutedEventArgs e)
+        {
+            addDefender addDefenderWindow = new addDefender();
+            addDefenderWindow.ShowDialog();
+        }
+
+        private void menuItemAddStaff_Click(object sender, RoutedEventArgs e)
+        {
+            addStaff addStaffWindow = new addStaff();
+            addStaffWindow.ShowDialog();
+        }
     }
 }

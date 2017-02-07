@@ -40,12 +40,12 @@
             <MenuItem x:Name="menuFile" Header="File"/>
             <MenuItem x:Name="menuAdmin" Header="Admin">
                 <MenuItem x:Name="defenderMenu" Header="Defenders" HorizontalAlignment="Left" Width="190">
-                    <MenuItem x:Name="menuItemAddDefender" Header="Add Defender" HorizontalAlignment="Left" Width="165"/>
+                    <MenuItem x:Name="menuItemAddDefender" Header="Add Defender" HorizontalAlignment="Left" Width="165" Click="menuItemAddDefender_Click"/>
                     <MenuItem x:Name="menuItemRemoveDefender" Header="Remove Defender" HorizontalAlignment="Left" Width="190"/>
 
                 </MenuItem>
                 <MenuItem Header="Staff" HorizontalAlignment="Left" Width="190">
-                    <MenuItem x:Name="menuItemAddStaff" Header="Add Staff" HorizontalAlignment="Left" Width="145"/>
+                    <MenuItem x:Name="menuItemAddStaff" Header="Add Staff" HorizontalAlignment="Left" Width="145" Click="menuItemAddStaff_Click"/>
                     <MenuItem x:Name="menuItemRemoveStaff" Header="Remove Staff" HorizontalAlignment="Left" Width="165"/>
                 </MenuItem>
             </MenuItem>
