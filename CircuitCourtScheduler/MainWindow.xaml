@@ -9,14 +9,15 @@
 
     <Grid MinWidth="50" MinHeight="100">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="74*"/>
+            <ColumnDefinition Width="65*"/>
             <ColumnDefinition Width="453*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
 
         </Grid.RowDefinitions>
-        <TabControl x:Name="tabControl" Margin="0,30,0,10" Grid.ColumnSpan="2">
+        <TabControl x:Name="tabControl" Margin="0,30,0,10" Grid.ColumnSpan="3">
             <TabItem Header="Staff">
                 <DataGrid x:Name="staffDataGrid" Margin="135,-2,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                 </DataGrid>
@@ -35,9 +36,19 @@
             </TabItem>
 
         </TabControl>
-        <Menu x:Name="menu" Grid.ColumnSpan="2" Height="20" VerticalAlignment="Top">
-            <MenuItem Header="File"/>
-            <MenuItem Header="Admin"/>
+        <Menu x:Name="menu" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Top">
+            <MenuItem x:Name="menuFile" Header="File"/>
+            <MenuItem x:Name="menuAdmin" Header="Admin">
+                <MenuItem x:Name="defenderMenu" Header="Defenders" HorizontalAlignment="Left" Width="190">
+                    <MenuItem x:Name="menuItemAddDefender" Header="Add Defender" HorizontalAlignment="Left" Width="165"/>
+                    <MenuItem x:Name="menuItemRemoveDefender" Header="Remove Defender" HorizontalAlignment="Left" Width="190"/>
+
+                </MenuItem>
+                <MenuItem Header="Staff" HorizontalAlignment="Left" Width="190">
+                    <MenuItem x:Name="menuItemAddStaff" Header="Add Staff" HorizontalAlignment="Left" Width="145"/>
+                    <MenuItem x:Name="menuItemRemoveStaff" Header="Remove Staff" HorizontalAlignment="Left" Width="165"/>
+                </MenuItem>
+            </MenuItem>
         </Menu>
 
     </Grid>
