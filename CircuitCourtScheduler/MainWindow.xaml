@@ -5,18 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CircuitCourtScheduler"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="600">
 
-    <ListView Name="listView">
-        <ListView.View>
-            <GridView AllowsColumnReorder="true" ColumnHeaderToolTip="Authors">
-                <GridViewColumn Header="UserName" Width="120" DisplayMemberBinding="{Binding Path=userName}" />
-                <GridViewColumn Header="First Name" Width="50" DisplayMemberBinding="{Binding Path=firstName}" />
-                <GridViewColumn Header="Last Name" Width="250" DisplayMemberBinding="{Binding Path=lastName}" />
-                <GridViewColumn Header="email" Width="50" DisplayMemberBinding="{Binding Path=email}" />
-            </GridView>
-        </ListView.View>
-    </ListView>
+    <Grid MinWidth="50" MinHeight="100">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="68*"/>
+            <RowDefinition Height="216*"/>
+            <RowDefinition Height="73*"/>
+        </Grid.RowDefinitions>
+        <TabControl x:Name="tabControl" Grid.Column="1" Margin="0,50,0,0" Grid.RowSpan="2">
+            <TabItem Header="Staff">
+                <DataGrid x:Name="staffDataGrid" Margin="0,0,-1,-1" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Defender">
+                <DataGrid x:Name="defenderDataGrid" Margin="0,0,-1,-1" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <DataGrid x:Name="dataGrid" Margin="0,0,-1,-1" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                </DataGrid>
 
-
+            </TabItem>
+        </TabControl>
+        <Menu x:Name="menu" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Top">
+            <MenuItem Header="MenuItem"/>
+            <MenuItem Header="MenuItem"/>
+        </Menu>
+        
+    </Grid>
 </Window>
