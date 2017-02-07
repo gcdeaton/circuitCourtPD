@@ -43,6 +43,7 @@
                     <MenuItem x:Name="menuItemEditCase" Header="Edit Case" HorizontalAlignment="Left" Width="145" Click="menuItemEditCase_Click"/>
                     <MenuItem x:Name="menuItemViewEdits" Header="View Edits" HorizontalAlignment="Left" Width="145" Click="menuItemViewEdits_Click"/>
                 </MenuItem>
+                <MenuItem Header="Report" HorizontalAlignment="Left" Width="145"/>
             </MenuItem>
             <MenuItem x:Name="menuAdmin" Header="Admin">
                 <MenuItem x:Name="defenderMenu" Header="Defenders" HorizontalAlignment="Left" Width="190">
