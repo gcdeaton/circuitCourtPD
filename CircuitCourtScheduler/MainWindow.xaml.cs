@@ -38,5 +38,21 @@ namespace CircuitCourtScheduler
             addStaff addStaffWindow = new addStaff();
             addStaffWindow.ShowDialog();
         }
+
+        private void menuItemAddCase_Click(object sender, RoutedEventArgs e)
+        {
+            Add_Case addCaseWindow = new Add_Case();
+            addCaseWindow.ShowDialog();
+        }
+
+        private void menuItemEditCase_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void menuItemViewEdits_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

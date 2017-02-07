@@ -37,7 +37,13 @@
 
         </TabControl>
         <Menu x:Name="menu" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Top">
-            <MenuItem x:Name="menuFile" Header="File"/>
+            <MenuItem x:Name="menuFile" Header="File">
+                <MenuItem Header="Case" HorizontalAlignment="Left" Width="145" >
+                    <MenuItem x:Name="menuItemAddCase" Header="Add Case" HorizontalAlignment="Left" Width="145" Click="menuItemAddCase_Click"/>
+                    <MenuItem x:Name="menuItemEditCase" Header="Edit Case" HorizontalAlignment="Left" Width="145" Click="menuItemEditCase_Click"/>
+                    <MenuItem x:Name="menuItemViewEdits" Header="View Edits" HorizontalAlignment="Left" Width="145" Click="menuItemViewEdits_Click"/>
+                </MenuItem>
+            </MenuItem>
             <MenuItem x:Name="menuAdmin" Header="Admin">
                 <MenuItem x:Name="defenderMenu" Header="Defenders" HorizontalAlignment="Left" Width="190">
                     <MenuItem x:Name="menuItemAddDefender" Header="Add Defender" HorizontalAlignment="Left" Width="165" Click="menuItemAddDefender_Click"/>
