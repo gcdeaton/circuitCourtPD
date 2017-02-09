@@ -54,5 +54,17 @@ namespace CircuitCourtScheduler
         {
 
         }
+
+        private void menuItemRemoveDefender_Click(object sender, RoutedEventArgs e)
+        {
+            RemoveDefender removeDefenderWindow = new RemoveDefender();
+            removeDefenderWindow.ShowDialog();
+        }
+
+        private void menuItemRemoveStaff_Click(object sender, RoutedEventArgs e)
+        {
+            RemoveStaff removeStaffWindow = new RemoveStaff();
+            removeStaffWindow.ShowDialog();
+        }
     }
 }
