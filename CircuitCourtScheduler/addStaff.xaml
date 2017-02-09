@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="addStaff" Height="315.991" Width="252.03">
     <Grid Margin="0,0,2,0">
-        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="23" Margin="94,21,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Height="23" Margin="94,65,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="23" Margin="94,112,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="23" Margin="94,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Height="23" Margin="94,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="23" Margin="94,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="labelEmail" Content="Email" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
         <Label x:Name="labelFirstName" Content="First Name" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
         <Label x:Name="labelLastName" Content="Last Name" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
