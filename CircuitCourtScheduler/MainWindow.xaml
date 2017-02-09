@@ -22,33 +22,63 @@
                 <Grid>
                     <DataGrid x:Name="staffDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                     </DataGrid>
-                    <GroupBox x:Name="groupBoxStaffOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134"/>
+                    <GroupBox x:Name="groupBoxStaffOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134">
+                        <Grid>
+                            
+                        </Grid>
+                    </GroupBox>
 
                 </Grid>
-                
+
             </TabItem>
             <TabItem Header="Defender">
                 <Grid>
                     <DataGrid x:Name="defenderDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                     </DataGrid>
-                    <GroupBox x:Name="groupBoxDefenderOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134"/>
+                    <GroupBox x:Name="groupBoxDefenderOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134">
+                        <Grid>
+                            
+                        </Grid>
+                    </GroupBox>
                 </Grid>
-                
+
             </TabItem>
-            <TabItem Header="Case">
+            <TabItem Header="Case" RenderTransformOrigin="0.5,0.5" Height="23" VerticalAlignment="Bottom">
+                <TabItem.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.62"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TabItem.RenderTransform>
                 <Grid>
                     <DataGrid x:Name="caseDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                     </DataGrid>
-                    <GroupBox x:Name="groupBoxCaseSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="234" Width="134"/>
-                    <GroupBox x:Name="groupBoxCaseOptions" Header="Options" HorizontalAlignment="Left" Margin="0,239,0,0" VerticalAlignment="Top" Height="412" Width="134"/>
+                    <GroupBox x:Name="groupBoxCaseSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
+                        <Grid>
+                            <TextBox x:Name="textBoxCaseSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
+                            <ComboBox x:Name="comboBoxCasefields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Name="groupBoxCaseOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="412" Width="134">
+                        <Grid>
+
+                        </Grid>
+                    </GroupBox>
                 </Grid>
             </TabItem>
             <TabItem Header="Edits">
                 <Grid>
                     <DataGrid x:Name="editsDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                     </DataGrid>
-                    <GroupBox x:Name="groupBoxEditSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="234" Width="134"/>
-                    <GroupBox x:Name="groupBoxEditOptions" Header="Options" HorizontalAlignment="Left" Margin="0,239,0,0" VerticalAlignment="Top" Height="412" Width="134"/>
+                    <GroupBox x:Name="groupBoxEditSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
+                        <Grid>
+                            <TextBox x:Name="textBoxEditSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
+                            <ComboBox x:Name="comboBoxEditfields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Name="groupBoxEditOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="234" Width="134"/>
                 </Grid>
 
             </TabItem>
