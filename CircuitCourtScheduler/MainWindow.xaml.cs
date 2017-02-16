@@ -23,8 +23,6 @@ namespace CircuitCourtScheduler
         public MainWindow()
         {
             InitializeComponent();
-            
-
         }
 
         private void menuItemAddDefender_Click(object sender, RoutedEventArgs e)
@@ -52,7 +50,13 @@ namespace CircuitCourtScheduler
 
         private void menuItemViewEdits_Click(object sender, RoutedEventArgs e)
         {
-
+            foreach(TabItem tab in tabControl.Items)
+            {
+                if(tab.Header.ToString() == "Edits")
+                {
+                    tab.IsSelected = true;
+                }
+            }
         }
 
         private void menuItemRemoveDefender_Click(object sender, RoutedEventArgs e)
