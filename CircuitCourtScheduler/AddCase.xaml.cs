@@ -29,22 +29,6 @@ namespace CircuitCourtScheduler
 
         private void buttonAddCase_Click(object sender, RoutedEventArgs e)
         {
-            try {
-                SqlConnection thisConnection = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\Gabe\\Source\\Repos\\circuitCourtPD\\CircuitCourtScheduler\\App_Data\\CircuitCourtDB.mdf; Integrated Security = True");
-                thisConnection.Open();
-                string qry = "INSERT into StaffTable [FIRSTNAME,LASTNAME,EMAIL,DATEADDED] values [Johnny,Cash,Jcash@Jmoney.com,@s]";
-                SqlCommand cmd = new SqlCommand(qry);
-                cmd.Parameters.AddWithValue("@s",DateTime.Today);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                thisConnection.Close();
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            
-
-
             
         }
     }
