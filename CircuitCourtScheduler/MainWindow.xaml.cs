@@ -33,38 +33,57 @@ namespace CircuitCourtScheduler
             query.Disconnect();  
         }
 
-        private void menuItemAddDefender_Click(object sender, RoutedEventArgs e)
+        private void logOutItem_Click(object sender, RoutedEventArgs e)
         {
-            addDefender addDefenderWindow = new addDefender();
-            addDefenderWindow.ShowDialog();
+
         }
 
-        private void menuItemAddStaff_Click(object sender, RoutedEventArgs e)
+        private void reportItem_Click(object sender, RoutedEventArgs e)
         {
-            addStaff addStaffWindow = new addStaff();
-            addStaffWindow.ShowDialog();
+
         }
 
-        private void menuItemAddCase_Click(object sender, RoutedEventArgs e)
+        private void editCase_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void editStaff_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void editDefender_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void editLawOffice_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void addCase_Click(object sender, RoutedEventArgs e)
         {
             Add_Case addCaseWindow = new Add_Case();
             addCaseWindow.ShowDialog();
         }
 
-        private void menuItemEditCase_Click(object sender, RoutedEventArgs e)
+        private void addStaff_Click(object sender, RoutedEventArgs e)
         {
-
+            addStaff addStaffWindow = new addStaff();
+            addStaffWindow.ShowDialog();
         }
 
-        private void menuItemViewEdits_Click(object sender, RoutedEventArgs e)
+        private void addDefender_Click(object sender, RoutedEventArgs e)
         {
-            foreach(TabItem tab in tabControl.Items)
-            {
-                if(tab.Header.ToString() == "Edits")
-                {
-                    tab.IsSelected = true;
-                }
-            }
+            addDefender addDefenderWindow = new addDefender();
+            addDefenderWindow.ShowDialog();
+        }
+
+        private void addLawOffice_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

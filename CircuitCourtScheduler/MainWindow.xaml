@@ -108,20 +108,20 @@
 
         </TabControl>
         <Menu x:Name="menu" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Top">
-            <MenuItem x:Name="menuFile" Header="Add">
-                <MenuItem Header="Case" HorizontalAlignment="Left" Width="145"/>
-                <MenuItem Header="Staff" HorizontalAlignment="Left" Width="144.8"/>
-                <MenuItem Header="Defender" HorizontalAlignment="Left" Width="144.8"/>
-                <MenuItem Header="Law Office" HorizontalAlignment="Left" Width="144.8"/>
+            <MenuItem x:Name="menuAdd" Header="Add">
+                <MenuItem x:Name="addCase" Header="Case" HorizontalAlignment="Left" Width="145" Click="addCase_Click"/>
+                <MenuItem x:Name="addStaff" Header="Staff" HorizontalAlignment="Left" Width="144.8" Click="addStaff_Click"/>
+                <MenuItem x:Name="addDefender" Header="Defender" HorizontalAlignment="Left" Width="144.8" Click="addDefender_Click"/>
+                <MenuItem x:Name="addLawOffice" Header="Law Office" HorizontalAlignment="Left" Width="144.8" Click="addLawOffice_Click"/>
             </MenuItem>
-            <MenuItem x:Name="menuAdmin" Header="Edit">
-                <MenuItem Header="Case" HorizontalAlignment="Left" Width="139.2"/>
-                <MenuItem Header="Staff" HorizontalAlignment="Left" Width="139.2"/>
-                <MenuItem Header="Defender" HorizontalAlignment="Left" Width="139.2"/>
-                <MenuItem Header="Law Office" HorizontalAlignment="Left" Width="139.2"/>
+            <MenuItem x:Name="menuEdit" Header="Edit">
+                <MenuItem x:Name="editCase" Header="Case" HorizontalAlignment="Left" Width="139.2" Click="editCase_Click"/>
+                <MenuItem x:Name="editStaff" Header="Staff" HorizontalAlignment="Left" Width="139.2" Click="editStaff_Click"/>
+                <MenuItem x:Name="editDefender" Header="Defender" HorizontalAlignment="Left" Width="139.2" Click="editDefender_Click"/>
+                <MenuItem x:Name="editLawOffice" Header="Law Office" HorizontalAlignment="Left" Width="139.2" Click="editLawOffice_Click"/>
             </MenuItem>
-            <MenuItem Header="Report"/>
-            <MenuItem Header="Log Out" HorizontalAlignment="Right" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Top"/>
+            <MenuItem x:Name="reportItem" Header="Report" Click="reportItem_Click"/>
+            <MenuItem x:Name="logOutItem" Header="Log Out" HorizontalAlignment="Right" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Top" Click="logOutItem_Click"/>
         </Menu>
 
     </Grid>
