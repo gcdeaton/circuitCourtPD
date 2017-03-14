@@ -18,8 +18,8 @@
             </Grid>
         </GroupBox>
         <DataGrid x:Name="caseDataGrid" Margin="139,10,43,92" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False"/>
-        <Button x:Name="button" Content="Confirm" HorizontalAlignment="Left" Margin="411,341,0,0" Width="75" Click="button_Click"/>
-        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="139,341,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" Height="20"/>
+        <Button x:Name="buttonConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="411,341,0,0" Width="75" Click="buttonConfirm_Click"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="139,341,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click" Height="20"/>
 
     </Grid>
 </Window>

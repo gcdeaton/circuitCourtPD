@@ -22,8 +22,8 @@
         <TextBox x:Name="textBoxCaseNumber" HorizontalAlignment="Left" Height="23" Margin="142,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="comboBoxCaseTypes" HorizontalAlignment="Left" Margin="142,122,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxLitigant" HorizontalAlignment="Left" Height="23" Margin="142,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="buttonAddCase" Content="Submit" HorizontalAlignment="Left" Margin="187,231,0,0" VerticalAlignment="Top" Width="75" Click="buttonAddCase_Click"/>
-        <Button x:Name="button" Content="Cancel" HorizontalAlignment="Left" Margin="35,231,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="buttonSubmit" Content="Submit" HorizontalAlignment="Left" Margin="187,231,0,0" VerticalAlignment="Top" Width="75" Click="buttonSubmit_Click"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="35,231,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click"/>
 
     </Grid>
 </Window>
