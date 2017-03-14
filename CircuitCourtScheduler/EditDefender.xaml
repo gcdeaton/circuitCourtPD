@@ -18,9 +18,9 @@
         <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="23" Margin="154,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxLawOffice" HorizontalAlignment="Left" Height="23" Margin="154,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxPhoneNumber" HorizontalAlignment="Left" Height="23" Margin="154,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="buttonAddDefender" Content="Submit" HorizontalAlignment="Left" Margin="189,333,0,0" VerticalAlignment="Top" Width="85" Click="buttonAddDefender_Click"/>
+        <Button x:Name="buttonSubmit" Content="Submit" HorizontalAlignment="Left" Margin="189,333,0,0" VerticalAlignment="Top" Width="85" Click="buttonSubmit_Click"/>
         <CheckBox x:Name="checkBox" Content="Active?" HorizontalAlignment="Left" Margin="36,284,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Cancel" HorizontalAlignment="Left" Margin="47,333,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="47,333,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click"/>
 
     </Grid>
 </Window>
