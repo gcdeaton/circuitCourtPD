@@ -11,9 +11,15 @@
             <RowDefinition Height="73*"/>
             <RowDefinition Height="130*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="button" Content="Confirm" HorizontalAlignment="Left" Margin="340,133,0,107" Width="75" Click="button_Click" Grid.Row="1"/>
-        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="68,133,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click" Height="20" Grid.Row="1"/>
-        <DataGrid x:Name="defenderDataGrid" Margin="68,23,109,161" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False" Grid.RowSpan="2"/>
+        <Button x:Name="buttonConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="340,133,0,107" Width="75" Click="buttonConfirm_Click" Grid.Row="1"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="68,133,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click" Height="20" Grid.Row="1"/>
+        <DataGrid x:Name="defenderDataGrid" Margin="134,25,42.6,159" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False" Grid.RowSpan="2"/>
+        <GroupBox x:Name="groupBoxDefenderSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="141" Width="134">
+            <Grid Margin="0,22,-0.4,-22">
+                <TextBox x:Name="textBoxDefenderSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
+                <ComboBox x:Name="comboBoxDefenderfields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
+            </Grid>
+        </GroupBox>
 
     </Grid>
 </Window>

@@ -8,14 +8,14 @@
         Title="SearchLawOffice" Height="312.712" Width="474.789">
     <Grid Margin="0,0,45,0">
         <DataGrid x:Name="caseDataGrid" Margin="125,10,-25,49" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False"/>
-        <GroupBox x:Name="groupBoxCaseSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="101">
+        <GroupBox x:Name="groupBoxLawOfficeSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="101">
             <Grid Margin="0,0,-26,0">
-                <TextBox x:Name="textBoxCaseSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
+                <TextBox x:Name="textBoxLawOfficeSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
                 <ComboBox x:Name="comboBoxCasefields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="button" Content="Confirm" HorizontalAlignment="Left" Margin="347,252,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="161,252,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <Button x:Name="buttonConfirm" Content="Confirm" HorizontalAlignment="Left" Margin="347,252,0,0" VerticalAlignment="Top" Width="75" Click="buttonConfirm_Click"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="161,252,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click"/>
 
     </Grid>
 </Window>
