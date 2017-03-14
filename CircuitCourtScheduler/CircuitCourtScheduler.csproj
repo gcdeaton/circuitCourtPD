@@ -76,6 +76,9 @@
     <Compile Include="EditDefender.xaml.cs">
       <DependentUpon>EditDefender.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EditLawOffice.xaml.cs">
+      <DependentUpon>EditLawOffice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditStaff.xaml.cs">
       <DependentUpon>EditStaff.xaml</DependentUpon>
     </Compile>
@@ -109,6 +112,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EditDefender.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditLawOffice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
