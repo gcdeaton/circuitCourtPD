@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DatabaseQueries;
+using System.Data;
 
 namespace CircuitCourtScheduler
 {
@@ -23,6 +25,12 @@ namespace CircuitCourtScheduler
         public MainWindow()
         {
             InitializeComponent();
+
+            Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            query.SetSqlCommand("SELECT * FROM SelectAllStaff");
+            query.Connect();
+            staffDataGrid.ItemsSource = query.RunSelectQuery().AsDataView();
+            query.Disconnect();  
         }
 
         private void menuItemAddDefender_Click(object sender, RoutedEventArgs e)
