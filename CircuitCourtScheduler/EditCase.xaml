@@ -23,7 +23,7 @@
         <ComboBox x:Name="comboBoxCaseTypes" HorizontalAlignment="Left" Margin="142,122,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxLitigant" HorizontalAlignment="Left" Height="23" Margin="142,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="buttonAddCase" Content="Submit" HorizontalAlignment="Left" Margin="187,232,0,0" VerticalAlignment="Top" Width="75" Click="buttonAddCase_Click"/>
-        <Button x:Name="button" Content="Cancel" HorizontalAlignment="Left" Margin="28,232,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button" Content="Cancel" HorizontalAlignment="Left" Margin="28,232,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
         <CheckBox x:Name="checkBox" Content="Active?" HorizontalAlignment="Left" Margin="28,196,0,0" VerticalAlignment="Top"/>
 
     </Grid>
