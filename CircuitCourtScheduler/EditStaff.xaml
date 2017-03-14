@@ -1,0 +1,20 @@
+﻿<Window x:Class="CircuitCourtScheduler.EditStaff"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CircuitCourtScheduler"
+        mc:Ignorable="d"
+        Title="EditStaff" Height="300" Width="300">
+    <Grid>
+        <TextBox x:Name="textBoxEmail" HorizontalAlignment="Left" Height="23" Margin="94,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Height="23" Margin="94,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="23" Margin="94,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelEmail" Content="Email" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
+        <Label x:Name="labelFirstName" Content="First Name" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
+        <Label x:Name="labelLastName" Content="Last Name" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
+        <Button x:Name="buttonAddStaff" Content="Submit" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Width="75"/>
+        <CheckBox x:Name="checkBoxAdmin" Content="Admin Permissions" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

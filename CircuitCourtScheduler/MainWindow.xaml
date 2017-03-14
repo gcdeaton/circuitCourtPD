@@ -18,31 +18,7 @@
 
         </Grid.RowDefinitions>
         <TabControl x:Name="tabControl" Margin="0,30,0,10" Grid.ColumnSpan="3">
-            <TabItem Header="Staff">
-                <Grid>
-                    <DataGrid x:Name="staffDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False" AlternatingRowBackground="Gainsboro" AlternationCount="2" GridLinesVisibility="None" FontFamily="Times New Roman" FontSize="14.667"/>
-                    <GroupBox x:Name="groupBoxStaffOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134">
-                        <Grid>
-
-                        </Grid>
-                    </GroupBox>
-
-                </Grid>
-
-            </TabItem>
-            <TabItem Header="Defender">
-                <Grid>
-                    <DataGrid x:Name="defenderDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
-                    </DataGrid>
-                    <GroupBox x:Name="groupBoxDefenderOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134">
-                        <Grid>
-
-                        </Grid>
-                    </GroupBox>
-                </Grid>
-
-            </TabItem>
-            <TabItem Header="Case" RenderTransformOrigin="0.5,0.5" Height="23" VerticalAlignment="Bottom">
+            <TabItem Header="Case" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Margin="0" HorizontalAlignment="Left">
                 <TabItem.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -52,7 +28,7 @@
                     </TransformGroup>
                 </TabItem.RenderTransform>
                 <Grid>
-                    <DataGrid x:Name="caseDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                    <DataGrid x:Name="caseDataGrid" Margin="139,0,-3.2,-4.2" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                     </DataGrid>
                     <GroupBox x:Name="groupBoxCaseSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
@@ -67,7 +43,42 @@
                     </GroupBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Edits">
+            <TabItem Header="Staff" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0">
+                <Grid>
+                    <DataGrid x:Name="staffDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False" AlternatingRowBackground="Gainsboro" AlternationCount="2" GridLinesVisibility="None" FontFamily="Times New Roman" FontSize="14.667"/>
+                    <GroupBox x:Name="groupBoxStaffOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134">
+                        <Grid>
+
+                        </Grid>
+                    </GroupBox>
+
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Defender" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                <Grid>
+                    <DataGrid x:Name="defenderDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                    </DataGrid>
+                    <GroupBox x:Name="groupBoxDefenderOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134">
+                        <Grid>
+
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Law Office" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0">
+                <Grid>
+                    <DataGrid x:Name="lawOfficeDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                    </DataGrid>
+                    <GroupBox x:Name="groupBoxLawOfficeOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134">
+                        <Grid>
+
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Edits" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Bottom">
                 <Grid>
                     <DataGrid x:Name="editsDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                     </DataGrid>
@@ -81,43 +92,26 @@
                 </Grid>
 
             </TabItem>
-            <TabItem Header="Report">
-                <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="reportDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
-                    </DataGrid>
-                    <GroupBox x:Name="groupBoxReport" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
-                        <Grid>
-                            
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox x:Name="groupBoxReportOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="234" Width="134"/>
-                </Grid>
-            </TabItem>
+
 
 
 
         </TabControl>
         <Menu x:Name="menu" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Top">
-            <MenuItem x:Name="menuFile" Header="File">
-                <MenuItem Header="Case" HorizontalAlignment="Left" Width="145" >
-                    <MenuItem x:Name="menuItemAddCase" Header="Add Case" HorizontalAlignment="Left" Width="145" Click="menuItemAddCase_Click"/>
-                    <MenuItem x:Name="menuItemEditCase" Header="Edit Case" HorizontalAlignment="Left" Width="145" Click="menuItemEditCase_Click"/>
-                    <MenuItem x:Name="menuItemViewEdits" Header="View Edits" HorizontalAlignment="Left" Width="145" Click="menuItemViewEdits_Click"/>
-                </MenuItem>
-                <MenuItem Header="Report" HorizontalAlignment="Left" Width="145"/>
+            <MenuItem x:Name="menuFile" Header="Add">
+                <MenuItem Header="Case" HorizontalAlignment="Left" Width="145"/>
+                <MenuItem Header="Staff" HorizontalAlignment="Left" Width="144.8"/>
+                <MenuItem Header="Defender" HorizontalAlignment="Left" Width="144.8"/>
+                <MenuItem Header="Law Office" HorizontalAlignment="Left" Width="144.8"/>
             </MenuItem>
-            <MenuItem x:Name="menuAdmin" Header="Admin">
-                <MenuItem x:Name="defenderMenu" Header="Defenders" HorizontalAlignment="Left" Width="190">
-                    <MenuItem x:Name="menuItemAddDefender" Header="Add Defender" HorizontalAlignment="Left" Width="165" Click="menuItemAddDefender_Click"/>
-                    <MenuItem x:Name="menuItemRemoveDefender" Header="Remove Defender" HorizontalAlignment="Left" Width="190" Click="menuItemRemoveDefender_Click"/>
-
-                </MenuItem>
-                <MenuItem Header="Staff" HorizontalAlignment="Left" Width="190">
-                    <MenuItem x:Name="menuItemAddStaff" Header="Add Staff" HorizontalAlignment="Left" Width="145" Click="menuItemAddStaff_Click"/>
-                    <MenuItem x:Name="menuItemRemoveStaff" Header="Remove Staff" HorizontalAlignment="Left" Width="165" Click="menuItemRemoveStaff_Click"/>
-                </MenuItem>
+            <MenuItem x:Name="menuAdmin" Header="Edit">
+                <MenuItem Header="Case" HorizontalAlignment="Left" Width="139.2"/>
+                <MenuItem Header="Staff" HorizontalAlignment="Left" Width="139.2"/>
+                <MenuItem Header="Defender" HorizontalAlignment="Left" Width="139.2"/>
+                <MenuItem Header="Law Office" HorizontalAlignment="Left" Width="139.2"/>
             </MenuItem>
-            <MenuItem Header="User"/>
+            <MenuItem Header="Report"/>
+            <MenuItem Header="Log Out" HorizontalAlignment="Right" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Top"/>
         </Menu>
 
     </Grid>
