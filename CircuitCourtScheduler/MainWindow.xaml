@@ -19,14 +19,6 @@
         </Grid.RowDefinitions>
         <TabControl x:Name="tabControl" Margin="0,30,0,10" Grid.ColumnSpan="3">
             <TabItem Header="Case" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Margin="0" HorizontalAlignment="Left">
-                <TabItem.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-0.62"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </TabItem.RenderTransform>
                 <Grid>
                     <DataGrid x:Name="caseDataGrid" Margin="139,0,-3.2,-4.2" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
                     </DataGrid>
