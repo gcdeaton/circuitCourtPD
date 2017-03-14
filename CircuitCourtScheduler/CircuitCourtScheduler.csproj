@@ -88,6 +88,9 @@
     <Compile Include="SearchDefender.xaml.cs">
       <DependentUpon>SearchDefender.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SearchLawOffice.xaml.cs">
+      <DependentUpon>SearchLawOffice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SearchStaff.xaml.cs">
       <DependentUpon>SearchStaff.xaml</DependentUpon>
     </Compile>
@@ -166,6 +169,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SearchDefender.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchLawOffice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
