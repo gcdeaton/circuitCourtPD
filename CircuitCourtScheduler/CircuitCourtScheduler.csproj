@@ -144,12 +144,6 @@
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Queries.cs" />
-    <Compile Include="RemoveDefender.xaml.cs">
-      <DependentUpon>RemoveDefender.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="RemoveStaff.xaml.cs">
-      <DependentUpon>RemoveStaff.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Resources\Case.cs" />
     <Compile Include="Resources\Defender.cs" />
     <Compile Include="Resources\EditedCase.cs" />
@@ -160,14 +154,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="RemoveDefender.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="RemoveStaff.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="SearchCase.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
