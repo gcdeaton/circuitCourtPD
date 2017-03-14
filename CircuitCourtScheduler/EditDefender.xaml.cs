@@ -23,5 +23,10 @@ namespace CircuitCourtScheduler
         {
             InitializeComponent();
         }
+
+        private void buttonAddDefender_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

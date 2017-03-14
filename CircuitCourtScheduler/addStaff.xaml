@@ -13,7 +13,7 @@
         <Label x:Name="labelEmail" Content="Email" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
         <Label x:Name="labelFirstName" Content="First Name" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
         <Label x:Name="labelLastName" Content="Last Name" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
-        <Button x:Name="buttonAddStaff" Content="Submit" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="buttonAddStaff" Content="Submit" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Width="75" Click="buttonAddStaff_Click"/>
         <CheckBox x:Name="checkBoxAdmin" Content="Admin Permissions" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top"/>
 
     </Grid>

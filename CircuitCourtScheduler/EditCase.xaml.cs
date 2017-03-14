@@ -23,5 +23,10 @@ namespace CircuitCourtScheduler
         {
             InitializeComponent();
         }
+
+        private void buttonAddCase_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

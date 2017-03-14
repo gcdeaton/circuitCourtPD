@@ -15,7 +15,7 @@
             </Grid>
         </GroupBox>
         <Button x:Name="button" Content="Confirm" HorizontalAlignment="Left" Margin="347,252,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="161,252,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="161,252,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
 
     </Grid>
 </Window>

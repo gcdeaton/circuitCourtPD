@@ -18,7 +18,7 @@
         <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="23" Margin="154,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxLawOffice" HorizontalAlignment="Left" Height="23" Margin="154,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxPhoneNumber" HorizontalAlignment="Left" Height="23" Margin="154,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="buttonAddDefender" Content="Submit" HorizontalAlignment="Left" Margin="28,332,0,0" VerticalAlignment="Top" Width="85"/>
+        <Button x:Name="buttonAddDefender" Content="Submit" HorizontalAlignment="Left" Margin="28,332,0,0" VerticalAlignment="Top" Width="85" Click="buttonAddDefender_Click"/>
 
     </Grid>
 </Window>
