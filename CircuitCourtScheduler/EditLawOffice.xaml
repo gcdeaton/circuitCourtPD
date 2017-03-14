@@ -12,13 +12,13 @@
         <Label x:Name="label1_Copy" Content="Email" HorizontalAlignment="Left" Margin="34,92,0,0" VerticalAlignment="Top" Height="25"/>
         <Label x:Name="label1_Copy1" Content="Phone Number" HorizontalAlignment="Left" Margin="24,122,0,0" VerticalAlignment="Top" Height="25"/>
         <Label x:Name="label1_Copy2" Content="Name" HorizontalAlignment="Left" Margin="34,152,0,0" VerticalAlignment="Top" Height="25"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="120,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" Margin="120,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="23" Margin="120,126,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Height="23" Margin="120,156,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.497,3.584"/>
+        <TextBox x:Name="textBoxAddress" HorizontalAlignment="Left" Height="23" Margin="120,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Email" HorizontalAlignment="Left" Height="23" Margin="120,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_PhoneNumber" HorizontalAlignment="Left" Height="23" Margin="120,126,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Name" HorizontalAlignment="Left" Height="23" Margin="120,156,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.497,3.584"/>
         <CheckBox x:Name="checkBox" Content="Active?" HorizontalAlignment="Left" Margin="34,199,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Confirm" HorizontalAlignment="Left" Margin="172,234,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="56,234,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <Button x:Name="buttonSubmit" Content="Submit" HorizontalAlignment="Left" Margin="172,234,0,0" VerticalAlignment="Top" Width="75" Click="buttonSubmit_Click"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="56,234,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click"/>
 
     </Grid>
 </Window>
