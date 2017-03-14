@@ -77,7 +77,7 @@ namespace CircuitCourtScheduler
 
         private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (/*this.existUser()*/test())
+            if (this.existUser())
             {
                 Application.Current.Resources["user"] = textBoxEmail.Text;
                 MainWindow wind = new MainWindow();
@@ -90,11 +90,6 @@ namespace CircuitCourtScheduler
                 //LabelMessage.Visibility = Visibility.Hidden;
                 //LabelMessage.Content = "Your Login Info is Incorrect";
             }
-        }
-
-        private Boolean test()
-        {
-            return (textBoxEmail.Text == "user" && textBoxPassword.Text == "letMeIn");
         }
     }
 }
