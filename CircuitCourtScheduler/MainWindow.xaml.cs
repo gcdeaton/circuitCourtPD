@@ -26,7 +26,7 @@ namespace CircuitCourtScheduler
         {
             InitializeComponent();
 
-            Queries query = new Queries(new System.Data.SqlClient.SqlConnection());
+            Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
             query.SetSqlCommand("SELECT * FROM SelectAllStaff");
             query.Connect();
             staffDataGrid.ItemsSource = query.RunSelectQuery().AsDataView();
