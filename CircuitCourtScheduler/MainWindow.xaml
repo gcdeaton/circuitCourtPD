@@ -23,7 +23,12 @@
                     <DataGrid x:Name="staffDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False" AlternatingRowBackground="Gainsboro" AlternationCount="2" GridLinesVisibility="None" FontFamily="Times New Roman" FontSize="14.667"/>
                     <GroupBox x:Name="groupBoxStaffOptions" Header="Options" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="412" Width="134">
                         <Grid>
-
+                            <Button Margin="5" Grid.Row="0" Content="Add Staff"/>
+                            <Button Margin="5" Grid.Row="1" Content="Edit Staff"/>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
                         </Grid>
                     </GroupBox>
 
@@ -62,7 +67,12 @@
                     </GroupBox>
                     <GroupBox x:Name="groupBoxCaseOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="412" Width="134">
                         <Grid>
-
+                            <Button Margin="5" Grid.Row="0" Content="Add Case"/>
+                            <Button Margin="5" Grid.Row="1" Content="Edit Case"/>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
                         </Grid>
                     </GroupBox>
                 </Grid>
@@ -80,18 +90,6 @@
                     <GroupBox x:Name="groupBoxEditOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="234" Width="134"/>
                 </Grid>
 
-            </TabItem>
-            <TabItem Header="Report">
-                <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="reportDataGrid" Margin="139,0,-3,-4" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
-                    </DataGrid>
-                    <GroupBox x:Name="groupBoxReport" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
-                        <Grid>
-                            
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox x:Name="groupBoxReportOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="234" Width="134"/>
-                </Grid>
             </TabItem>
 
 
