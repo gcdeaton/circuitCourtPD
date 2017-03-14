@@ -24,12 +24,14 @@ namespace CircuitCourtScheduler
             InitializeComponent();
         }
 
-        private void buttonAddDefender_Click(object sender, RoutedEventArgs e)
+
+
+        private void buttonSubmit_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
 
         }
