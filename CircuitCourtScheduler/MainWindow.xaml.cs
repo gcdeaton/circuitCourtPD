@@ -26,11 +26,81 @@ namespace CircuitCourtScheduler
         {
             InitializeComponent();
 
+            populateStaffData();
+            populateCaseData();
+            populateDefenderData();
+            populateLawOffice();
+            populateEditsData();
+        }
+
+        private void populateEditsData()
+        {
             Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
-            query.SetSqlCommand("SELECT * FROM SelectAllStaff");
+            query.SetSqlCommand("SELECT * FROM SelectAllEdits");
             query.Connect();
-            staffDataGrid.ItemsSource = query.RunSelectQuery().AsDataView();
-            query.Disconnect();  
+            DataTable dt = query.RunSelectQuery();
+            editsDataGrid.ItemsSource = dt.AsDataView();
+            query.Disconnect();
+
+            foreach (DataColumn col in dt.Columns)
+            {
+                ComboBoxItem cbi = new ComboBoxItem();
+                cbi.Content = col.ColumnName;
+                comboBoxEditsFields.Items.Add(cbi);
+            }
+        }
+
+        private void populateLawOffice()
+        {
+
+            Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            query.SetSqlCommand("SELECT * FROM SelectAllLawOffice");
+            query.Connect();
+            DataTable dt = query.RunSelectQuery();
+            lawOfficeDataGrid.ItemsSource = dt.AsDataView();
+            query.Disconnect();
+
+            foreach (DataColumn col in dt.Columns)
+            {
+                ComboBoxItem cbi = new ComboBoxItem();
+                cbi.Content = col.ColumnName;
+                comboBoxLawOfficeFields.Items.Add(cbi);
+            }
+        }
+
+        private void populateDefenderData()
+        {
+
+            Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            query.SetSqlCommand("SELECT * FROM SelectAllDefenders");
+            query.Connect();
+            DataTable dt = query.RunSelectQuery();
+            defenderDataGrid.ItemsSource = dt.AsDataView();
+            query.Disconnect();
+
+            foreach (DataColumn col in dt.Columns)
+            {
+                ComboBoxItem cbi = new ComboBoxItem();
+                cbi.Content = col.ColumnName;
+                comboBoxDefenderFields.Items.Add(cbi);
+            }
+        }
+
+        private void populateCaseData()
+        {
+            Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            query.SetSqlCommand("SELECT * FROM SelectAllCases");
+            query.Connect();
+            DataTable dt = query.RunSelectQuery();
+            caseDataGrid.ItemsSource = dt.AsDataView();
+            query.Disconnect();
+
+            foreach (DataColumn col in dt.Columns)
+            {
+                ComboBoxItem cbi = new ComboBoxItem();
+                cbi.Content = col.ColumnName;
+                comboBoxCaseFields.Items.Add(cbi);
+            }
         }
 
         private void logOutItem_Click(object sender, RoutedEventArgs e)
@@ -84,6 +154,28 @@ namespace CircuitCourtScheduler
         private void addLawOffice_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void textBoxCaseSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void populateStaffData()
+        {
+            Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            query.SetSqlCommand("SELECT * FROM SelectAllStaff");
+            query.Connect();
+            DataTable dt = query.RunSelectQuery();
+            staffDataGrid.ItemsSource = dt.AsDataView();
+            query.Disconnect();
+
+            foreach (DataColumn col in dt.Columns)
+            {
+                ComboBoxItem cbi = new ComboBoxItem();
+                cbi.Content = col.ColumnName;
+                comboBoxStaffFields.Items.Add(cbi);
+            }
         }
     }
 }

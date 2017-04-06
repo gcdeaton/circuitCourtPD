@@ -24,8 +24,8 @@
                     </DataGrid>
                     <GroupBox x:Name="groupBoxCaseSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
-                            <TextBox x:Name="textBoxCaseSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
-                            <ComboBox x:Name="comboBoxCasefields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
+                            <TextBox x:Name="textBoxCaseSearch" Margin="10,65,10,0" VerticalAlignment="Top" TextChanged="textBoxCaseSearch_TextChanged"/>
+                            <ComboBox x:Name="comboBoxCaseFields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
                         </Grid>
                     </GroupBox>
                     <GroupBox x:Name="groupBoxCaseOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="412" Width="134">
@@ -42,7 +42,7 @@
                     <GroupBox x:Name="groupBoxStaffSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
                             <TextBox x:Name="textBoxStaffSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
-                            <ComboBox x:Name="comboBoxtafffields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
+                            <ComboBox x:Name="comboBoxStaffFields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
                         </Grid>
                     </GroupBox>
                     <GroupBox x:Name="groupBoxStaffOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="412" Width="134">
@@ -60,7 +60,7 @@
                     <GroupBox x:Name="groupBoxDefenderSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
                             <TextBox x:Name="textBoxDefenderSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
-                            <ComboBox x:Name="comboBoxDefenderfields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
+                            <ComboBox x:Name="comboBoxDefenderFields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
                         </Grid>
                     </GroupBox>
                     <GroupBox x:Name="groupBoxDefenderOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="412" Width="134">
@@ -78,7 +78,7 @@
                     <GroupBox x:Name="groupBoxLawOfficeSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
                             <TextBox x:Name="textBoxLawOfficeSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
-                            <ComboBox x:Name="comboBoxLawOfficefields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
+                            <ComboBox x:Name="comboBoxLawOfficeFields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
                         </Grid>
                     </GroupBox>
                     <GroupBox x:Name="groupBoxLawOfficeOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="412" Width="134">
@@ -95,7 +95,7 @@
                     <GroupBox x:Name="groupBoxEditSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
                             <TextBox x:Name="textBoxEditSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
-                            <ComboBox x:Name="comboBoxEditfields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
+                            <ComboBox x:Name="comboBoxEditsFields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
                         </Grid>
                     </GroupBox>
                     <GroupBox x:Name="groupBoxEditOptions" Header="Options" HorizontalAlignment="Left" Margin="0,132,0,0" VerticalAlignment="Top" Height="234" Width="134"/>
