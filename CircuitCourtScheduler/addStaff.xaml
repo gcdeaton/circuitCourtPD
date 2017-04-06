@@ -14,8 +14,9 @@
         <Label x:Name="labelFirstName" Content="First Name" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
         <Label x:Name="labelLastName" Content="Last Name" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Height="23" Width="67"/>
         <Button x:Name="buttonSubmit" Content="Submit" HorizontalAlignment="Left" Margin="139,211,0,0" VerticalAlignment="Top" Width="75" Click="buttonSubmit_Click"/>
-        <CheckBox x:Name="checkBoxAdmin" Content="Admin Permissions" HorizontalAlignment="Left" Margin="10,161,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Cancel" HorizontalAlignment="Left" Margin="21,211,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click"/>
+        <Label x:Name="labelPassword" Content="Password" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="23" Margin="94,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

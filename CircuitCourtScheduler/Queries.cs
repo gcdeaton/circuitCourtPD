@@ -46,5 +46,11 @@ namespace DatabaseQueries
             cmd.Parameters.AddWithValue(query, parameter);
         }
 
+
+        public void ExecuteNonQuery()
+        {
+            cmd.ExecuteNonQuery();
+        }
+
     }
 }

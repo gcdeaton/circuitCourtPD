@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatabaseQueries;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,12 +25,20 @@ namespace CircuitCourtScheduler
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void buttonSubmit_Click(object sender, RoutedEventArgs e)
         {
-
+            Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            query.SetSqlCommand("INSERT INTO LawOfficeTable(NAME,ADDRESS,EMAIL,PHONENUMBER) VALUES(@Name,@Address, @Email, @PhoneNumber)");
+            query.AddQueryParameters("@Name", textBoxName.Text);
+            query.AddQueryParameters("@Address", textBoxAddress.Text);
+            query.AddQueryParameters("@Email", textBoxEmail.Text);
+            query.AddQueryParameters("@PhoneNumber", textBoxPhoneNumber.Text);
+            query.Connect();
+            query.ExecuteNonQuery();
+            query.Disconnect();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
 
         }

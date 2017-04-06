@@ -82,6 +82,7 @@
     <Compile Include="EditStaff.xaml.cs">
       <DependentUpon>EditStaff.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs" />
     <Compile Include="SearchCase.xaml.cs">
       <DependentUpon>SearchCase.xaml</DependentUpon>
     </Compile>
