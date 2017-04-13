@@ -31,12 +31,6 @@ namespace CircuitCourtScheduler
         public MainWindow()
         {
             InitializeComponent();
-
-            populateStaffData();
-            populateCaseData();
-            populateDefenderData();
-            populateLawOffice();
-            populateEditsData();
         }
 
         private void populateEditsData()
@@ -304,6 +298,16 @@ namespace CircuitCourtScheduler
             editWindow.Show();
 
 
+        }
+        
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            populateCaseData();
+            populateDefenderData();
+            populateEditsData();
+            populateLawOffice();
+            populateStaffData();
+         
         }
     }
 

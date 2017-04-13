@@ -5,19 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CircuitCourtScheduler"
         mc:Ignorable="d"
-        Title="MainWindow" Height="735" Width="766">
-
+        Title="MainWindow" Height="735" Width="766" Activated="Window_Activated"
+        >
+        
     <Grid MinWidth="50" MinHeight="100" Margin="0,0,2,-11">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="74*"/>
-            <ColumnDefinition Width="65*"/>
-            <ColumnDefinition Width="453*"/>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="333*"/>
+            <ColumnDefinition Width="245*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
 
         </Grid.RowDefinitions>
-        <TabControl x:Name="tabControl" Margin="0,30,0,10" Grid.ColumnSpan="3">
+        <TabControl x:Name="tabControl" Margin="0,30,0,10" Grid.ColumnSpan="4">
             <TabItem Header="Case" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Margin="0" HorizontalAlignment="Left">
                 <Grid>
                     <DataGrid x:Name="caseDataGrid" Margin="139,0,-3.2,-4.2" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False" GridLinesVisibility="None" AlternatingRowBackground="#FFCFCBCB">
@@ -112,7 +114,7 @@
 
 
         </TabControl>
-        <Menu x:Name="menu" Grid.ColumnSpan="3" Height="20" VerticalAlignment="Top">
+        <Menu x:Name="menu" Grid.ColumnSpan="4" Height="20" VerticalAlignment="Top">
             <MenuItem x:Name="menuAdd" Header="Add">
                 <MenuItem x:Name="addCase" Header="Case" HorizontalAlignment="Left" Width="145" Click="addCase_Click"/>
                 <MenuItem x:Name="addStaff" Header="Staff" HorizontalAlignment="Left" Width="144.8" Click="addStaff_Click"/>

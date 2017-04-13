@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -63,24 +64,43 @@ namespace CircuitCourtScheduler
                     
                 }
             }
-            
 
 
+            DatabaseQueries.Queries defenderQuery = new DatabaseQueries.Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            defenderQuery.SetSqlCommand("SELECT FIRSTNAME,LASTNAME,EMAIL FROM DefendersTable");
+            defenderQuery.Connect();
+            DataTable dt = defenderQuery.RunSelectQuery();
+            defenderQuery.Disconnect();
 
-            //for(int i =0; i <= nodeList.Count - 1; i++)
-            //{
-            //    ComboBoxItem cbi = new ComboBoxItem();
-            //    cbi.Content = nodeList[i].ChildNodes.Item(i).InnerText;
-            //    comboBoxCaseTypes.Items.Add(cbi);
+            foreach (DataRow row in dt.Rows)
+            {
+                ComboBoxItem cbi = new ComboBoxItem();
+                cbi.Content = row["FIRSTNAME"].ToString() + " " + row["LASTNAME"].ToString();
+                comboBoxDefenders.Items.Add(cbi);
+            }
 
-            //}
 
-            
         }
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
         {
-
+            DatabaseQueries.Queries updateQuery = new DatabaseQueries.Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            updateQuery.SetSqlCommand("UPDATE CaseTable SET DATEOF = @Date, DEFENDER = @Defender WHERE CASENUMBER = @Casenumber");
+            updateQuery.AddQueryParameters("@Date",datePickerHearing.SelectedDate);
+            updateQuery.AddQueryParameters("@Defender",comboBoxDefenders.Text);
+            updateQuery.AddQueryParameters("@Casenumber",caseNumber);
+            updateQuery.Connect();
+            updateQuery.ExecuteNonQuery();
+            updateQuery.Disconnect();
+            
+            //DatabaseQueries.Queries insertQuery = new DatabaseQueries.Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            //insertQuery.SetSqlCommand("INSERT INTO EditedTable(CASENUMBER,USERNAME,REASON,DATEOFCHANGE,IDENTIFIER) VALUES(@CaseNumber,@UserName, @Reason, @DateOfChange, @Identifier)");
+            //insertQuery.AddQueryParameters("@CaseNumber",);
+            //insertQuery.AddQueryParameters("@UserName",);
+            //insertQuery.AddQueryParameters("@Reason",);
+            //insertQuery.AddQueryParameters("@DateOfChange", DateTime.Today);
+            //insertQuery.AddQueryParameters("@Identifier",);
+            
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
