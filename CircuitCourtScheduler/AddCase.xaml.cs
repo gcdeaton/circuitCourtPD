@@ -16,6 +16,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Net.Mail;
 using DatabaseQueries;
+using System.Net;
 
 namespace CircuitCourtScheduler
 {
@@ -38,7 +39,7 @@ namespace CircuitCourtScheduler
                 ComboBoxItem cbi = new ComboBoxItem();
                 cbi.Content = row["FIRSTNAME"].ToString() + " " + row["LASTNAME"].ToString();
                 comboBoxDefenders.Items.Add(cbi);
-            }
+        }
         }
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
@@ -66,20 +67,19 @@ namespace CircuitCourtScheduler
 
         private void sendEmail()
         {
-            SmtpClient smtpClient = new SmtpClient("Host");
-
-            smtpClient.Credentials = new System.Net.NetworkCredential("PauperProjectcs498@gmail.com", "testPassword231");
-            smtpClient.UseDefaultCredentials = true;
-            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtpClient.EnableSsl = true;
+            String defenderEmail = "jgsayers@bsu.edu";
             MailMessage mail = new MailMessage();
 
-            mail.From = new MailAddress("PauperProjectcs498@gmail.com");
-            mail.To.Add(new MailAddress("jgsayers@bsu.edu"));
-            mail.Body = "This is a test message";
-            mail.Subject = "testEmail";
+            mail.From = new MailAddress("pauperProjectcs498@gmail.com");
+            mail.To.Add(defenderEmail);
+            mail.Subject = "Hello World";
+            mail.Body = "Hello";
 
-            smtpClient.Send(mail);
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+
+            smtp.Credentials = new NetworkCredential("pauperProjectcs498@gmail.com", "testPassword231");
+            smtp.EnableSsl = true;
+            smtp.Send(mail);
         }
     }
 }
