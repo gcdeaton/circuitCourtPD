@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace CircuitCourtScheduler
 {
@@ -37,6 +39,42 @@ namespace CircuitCourtScheduler
 
             textBoxCaseNumber.Text = caseNumber;
             textBoxLitigant.Text = litigant;
+            datePickerHearing.SelectedDate = dateOf;
+            XmlDocument doc = new XmlDocument();
+            XmlNodeList nodeList;
+            FileStream fs = new FileStream("C:\\Users\\Gabe\\Source\\Repos\\circuitCourtPD\\CircuitCourtScheduler\\CaseTypes.xml", FileMode.Open, FileAccess.Read);
+            doc.Load(fs);
+            fs.Close();
+            nodeList = doc.GetElementsByTagName("Case");
+           
+
+            foreach(XmlNode caseTypes in doc.ChildNodes)
+            {
+                foreach(XmlNode cases in caseTypes)
+                {
+                    ComboBoxItem cbi = new ComboBoxItem();
+                    cbi.Content = cases.InnerText;
+                    
+                    comboBoxCaseTypes.Items.Add(cbi);
+                    if(cbi.Content.Equals(caseType))
+                    {
+                        comboBoxCaseTypes.SelectedIndex = comboBoxCaseTypes.Items.IndexOf(cbi);
+                    }
+                    
+                }
+            }
+            
+
+
+
+            //for(int i =0; i <= nodeList.Count - 1; i++)
+            //{
+            //    ComboBoxItem cbi = new ComboBoxItem();
+            //    cbi.Content = nodeList[i].ChildNodes.Item(i).InnerText;
+            //    comboBoxCaseTypes.Items.Add(cbi);
+
+            //}
+
             
         }
 

@@ -17,6 +17,8 @@ using System.Data;
 using System.Net.Mail;
 using DatabaseQueries;
 using System.Net;
+using System.Xml;
+using System.IO;
 
 namespace CircuitCourtScheduler
 {
@@ -40,6 +42,26 @@ namespace CircuitCourtScheduler
                 cbi.Content = row["FIRSTNAME"].ToString() + " " + row["LASTNAME"].ToString();
                 comboBoxDefenders.Items.Add(cbi);
         }
+
+            XmlDocument doc = new XmlDocument();
+            XmlNodeList nodeList;
+            FileStream fs = new FileStream("C:\\Users\\Gabe\\Source\\Repos\\circuitCourtPD\\CircuitCourtScheduler\\CaseTypes.xml", FileMode.Open, FileAccess.Read);
+            doc.Load(fs);
+            fs.Close();
+            nodeList = doc.GetElementsByTagName("Case");
+
+
+            foreach (XmlNode caseTypes in doc.ChildNodes)
+            {
+                foreach (XmlNode cases in caseTypes)
+                {
+                    ComboBoxItem cbi = new ComboBoxItem();
+                    cbi.Content = cases.InnerText;
+
+                    comboBoxCaseTypes.Items.Add(cbi);
+
+                }
+            }
         }
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)

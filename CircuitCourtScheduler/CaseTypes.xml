@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CaseTypes>
+  <Case>Capital Murder</Case>
+  <Case>Murder</Case>
+  <Case>Felony A</Case>
+  <Case>Felony B</Case>
+  <Case>Felony C</Case>
+  <Case>Felony D</Case>
+  <Case>Felony 1</Case>
+  <Case>Felony 2</Case>
+  <Case>Felony 3</Case>
+  <Case>Felony 4</Case>
+  <Case>Felony 5</Case>
+  <Case>Felony 6</Case>
+  <Case>Misdemeanors</Case>
+  <Case>Juvenile Delinquency (if FA, FB, FC, or Level 1-5) </Case>
+  <Case>Juvenile Delinquency (if FD or Level 6)</Case>
+  <Case>Juvenile Delinquency (if Capital Murder as Adult)</Case>
+  <Case>JS</Case>
+  <Case>JM</Case>
+  <Case>Juvenile Probation Violation</Case>
+  <Case>JC</Case>
+  <Case>JT</Case>
+  <Case>Juvenile Probation Violation</Case>
+  <Case>JC</Case>
+  <Case>JT</Case>
+  <Case>Adult Probation Violation</Case>
+  <Case>Mental Health</Case>
+  <Case>All Non-reimbursable others</Case>
+  <Case>Trial Appeals</Case>
+  <Case>Guilty Plea Appeals</Case>
+</CaseTypes>

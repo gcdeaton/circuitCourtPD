@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CircuitCourtScheduler"
         mc:Ignorable="d"
-        Title="EditCase" Height="300" Width="300">
+        Title="EditCase" Height="387.033" Width="327.692">
     <Grid>
         <Label x:Name="labelCaseNumber" Content="Case Number" HorizontalAlignment="Left" Margin="23,27,0,0" VerticalAlignment="Top" Height="27" Width="87"/>
         <Label x:Name="labelDateOf" Content="Date Of Hearing" HorizontalAlignment="Left" Margin="23,75,0,0" VerticalAlignment="Top" Height="27" Width="99"/>
@@ -22,9 +22,9 @@
         <TextBox x:Name="textBoxCaseNumber" HorizontalAlignment="Left" Height="23" Margin="142,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <ComboBox x:Name="comboBoxCaseTypes" HorizontalAlignment="Left" Margin="142,122,0,0" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxLitigant" HorizontalAlignment="Left" Height="23" Margin="142,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="buttonSubmit" Content="Submit" HorizontalAlignment="Left" Margin="187,232,0,0" VerticalAlignment="Top" Width="75" Click="buttonSubmit_Click"/>
-        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="28,232,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click"/>
-        <CheckBox x:Name="checkBoxActive" Content="Active?" HorizontalAlignment="Left" Margin="28,196,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="buttonSubmit" Content="Submit" HorizontalAlignment="Left" Margin="187,287,0,0" VerticalAlignment="Top" Width="75" Click="buttonSubmit_Click"/>
+        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Margin="28,287,0,0" VerticalAlignment="Top" Width="75" Click="buttonCancel_Click"/>
+        <Label x:Name="Defender" Content="Defender:" HorizontalAlignment="Left" Margin="28,213,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
