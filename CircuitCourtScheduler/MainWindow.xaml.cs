@@ -286,5 +286,25 @@ namespace CircuitCourtScheduler
                 editsDataGrid.ItemsSource = dtEdit.AsDataView();
             }
         }
+
+        private void caseRow_DoubleClick(object sender, EventArgs e)
+        {
+            int rowIndex = caseDataGrid.SelectedIndex;
+
+            var row = (DataGridRow)caseDataGrid.ItemContainerGenerator.ContainerFromItem(caseDataGrid.SelectedItem);
+            DataRowView drv = (DataRowView)row.Item;
+            DataRow dr = (DataRow)drv.Row;
+            string caseNumber = dr.ItemArray[0].ToString();
+            string litigant = dr.ItemArray[1].ToString();
+            string caseType = dr.ItemArray[2].ToString();
+            DateTime dateOf = (DateTime)dr.ItemArray[3];
+            string defender = dr.ItemArray[4].ToString();
+
+            EditCase editWindow = new EditCase(caseNumber,litigant,caseType,dateOf,defender);
+            editWindow.Show();
+
+
+        }
     }
+
 }

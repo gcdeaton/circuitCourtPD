@@ -20,7 +20,12 @@
         <TabControl x:Name="tabControl" Margin="0,30,0,10" Grid.ColumnSpan="3">
             <TabItem Header="Case" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Margin="0" HorizontalAlignment="Left">
                 <Grid>
-                    <DataGrid x:Name="caseDataGrid" Margin="139,0,-3.2,-4.2" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False">
+                    <DataGrid x:Name="caseDataGrid" Margin="139,0,-3.2,-4.2" IsReadOnly="True" CanUserAddRows="False" CanUserResizeRows="False" GridLinesVisibility="None" AlternatingRowBackground="#FFCFCBCB">
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridRow">
+                                <EventSetter Event="MouseDoubleClick" Handler="caseRow_DoubleClick"/>
+                            </Style>
+                        </DataGrid.Resources>
                     </DataGrid>
                     <GroupBox x:Name="groupBoxCaseSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>

@@ -19,11 +19,26 @@ namespace CircuitCourtScheduler
     /// </summary>
     public partial class EditCase : Window
     {
-        public EditCase()
+        private string caseNumber;
+        private string litigant;
+        private string caseType;
+        private DateTime dateOf;
+        private string defender;
+
+
+        public EditCase(string caseNumber, string litigant, string caseType, DateTime dateOf, string defender)
         {
             InitializeComponent();
-        }
+            this.caseNumber = caseNumber;
+            this.litigant = litigant;
+            this.caseType = caseType;
+            this.dateOf = dateOf;
+            this.defender = defender;
 
+            textBoxCaseNumber.Text = caseNumber;
+            textBoxLitigant.Text = litigant;
+            
+        }
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
         {
@@ -32,7 +47,7 @@ namespace CircuitCourtScheduler
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }
