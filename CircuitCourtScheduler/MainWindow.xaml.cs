@@ -22,6 +22,12 @@ namespace CircuitCourtScheduler
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DataView dv;
+        private DataTable dtCase;
+        private DataTable dtStaff;
+        private DataTable dtDefender;
+        private DataTable dtEdit;
+        private DataTable dtLawOffice;
         public MainWindow()
         {
             InitializeComponent();
@@ -38,11 +44,11 @@ namespace CircuitCourtScheduler
             Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
             query.SetSqlCommand("SELECT * FROM SelectAllEdits");
             query.Connect();
-            DataTable dt = query.RunSelectQuery();
-            editsDataGrid.ItemsSource = dt.AsDataView();
+            dtEdit = query.RunSelectQuery();
+            editsDataGrid.ItemsSource = dtEdit.AsDataView();
             query.Disconnect();
 
-            foreach (DataColumn col in dt.Columns)
+            foreach (DataColumn col in dtEdit.Columns)
             {
                 ComboBoxItem cbi = new ComboBoxItem();
                 cbi.Content = col.ColumnName;
@@ -56,11 +62,11 @@ namespace CircuitCourtScheduler
             Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
             query.SetSqlCommand("SELECT * FROM SelectAllLawOffice");
             query.Connect();
-            DataTable dt = query.RunSelectQuery();
-            lawOfficeDataGrid.ItemsSource = dt.AsDataView();
+            dtLawOffice = query.RunSelectQuery();
+            lawOfficeDataGrid.ItemsSource = dtLawOffice.AsDataView();
             query.Disconnect();
 
-            foreach (DataColumn col in dt.Columns)
+            foreach (DataColumn col in dtLawOffice.Columns)
             {
                 ComboBoxItem cbi = new ComboBoxItem();
                 cbi.Content = col.ColumnName;
@@ -74,11 +80,11 @@ namespace CircuitCourtScheduler
             Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
             query.SetSqlCommand("SELECT * FROM SelectAllDefenders");
             query.Connect();
-            DataTable dt = query.RunSelectQuery();
-            defenderDataGrid.ItemsSource = dt.AsDataView();
+            dtDefender = query.RunSelectQuery();
+            defenderDataGrid.ItemsSource = dtDefender.AsDataView();
             query.Disconnect();
 
-            foreach (DataColumn col in dt.Columns)
+            foreach (DataColumn col in dtDefender.Columns)
             {
                 ComboBoxItem cbi = new ComboBoxItem();
                 cbi.Content = col.ColumnName;
@@ -91,11 +97,12 @@ namespace CircuitCourtScheduler
             Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
             query.SetSqlCommand("SELECT * FROM SelectAllCases");
             query.Connect();
-            DataTable dt = query.RunSelectQuery();
-            caseDataGrid.ItemsSource = dt.AsDataView();
+            dtCase = query.RunSelectQuery();
+            dv = dtCase.AsDataView();
+            caseDataGrid.ItemsSource = dv;
             query.Disconnect();
 
-            foreach (DataColumn col in dt.Columns)
+            foreach (DataColumn col in dtCase.Columns)
             {
                 ComboBoxItem cbi = new ComboBoxItem();
                 cbi.Content = col.ColumnName;
@@ -158,7 +165,25 @@ namespace CircuitCourtScheduler
 
         private void textBoxCaseSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
+            string searchField = comboBoxCaseFields.Text;
+            DataTable temp = dtCase.Clone();
+            if(textBoxCaseSearch.Text != "" && comboBoxCaseFields.SelectedIndex > -1)
+            {
+                foreach (DataRow row in dtCase.Rows)
+                {
+                    if (row[searchField].ToString().ToUpper().Contains(textBoxCaseSearch.Text.ToUpper()))
+                    {
+                        temp.ImportRow(row);
+                    }
+                }
+                caseDataGrid.ItemsSource = temp.AsDataView();
+            }
+            else
+            {
+                caseDataGrid.ItemsSource = dtCase.AsDataView();
+            }
             
+
         }
 
         private void populateStaffData()
@@ -166,15 +191,99 @@ namespace CircuitCourtScheduler
             Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
             query.SetSqlCommand("SELECT * FROM SelectAllStaff");
             query.Connect();
-            DataTable dt = query.RunSelectQuery();
-            staffDataGrid.ItemsSource = dt.AsDataView();
+            dtStaff = query.RunSelectQuery();
+            staffDataGrid.ItemsSource = dtStaff.AsDataView();
             query.Disconnect();
 
-            foreach (DataColumn col in dt.Columns)
+            foreach (DataColumn col in dtStaff.Columns)
             {
                 ComboBoxItem cbi = new ComboBoxItem();
                 cbi.Content = col.ColumnName;
                 comboBoxStaffFields.Items.Add(cbi);
+            }
+        }
+
+        private void textBoxStaffSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchField = comboBoxStaffFields.Text;
+            DataTable temp = dtStaff.Clone();
+            if (textBoxStaffSearch.Text != "" && comboBoxStaffFields.SelectedIndex > -1)
+            {
+                foreach (DataRow row in dtStaff.Rows)
+                {
+                    if (row[searchField].ToString().ToUpper().Contains(textBoxStaffSearch.Text.ToUpper()))
+                    {
+                        temp.ImportRow(row);
+                    }
+                }
+                staffDataGrid.ItemsSource = temp.AsDataView();
+            }
+            else
+            {
+                staffDataGrid.ItemsSource = dtStaff.AsDataView();
+            }
+        }
+
+        private void textBoxDefenderSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchField = comboBoxDefenderFields.Text;
+            DataTable temp = dtDefender.Clone();
+            if (textBoxDefenderSearch.Text != "" && comboBoxDefenderFields.SelectedIndex > -1)
+            {
+                foreach (DataRow row in dtDefender.Rows)
+                {
+                    if (row[searchField].ToString().ToUpper().Contains(textBoxDefenderSearch.Text.ToUpper()))
+                    {
+                        temp.ImportRow(row);
+                    }
+                }
+                defenderDataGrid.ItemsSource = temp.AsDataView();
+            }
+            else
+            {
+                defenderDataGrid.ItemsSource = dtDefender.AsDataView();
+            }
+        }
+
+        private void textBoxLawOfficeSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchField = comboBoxLawOfficeFields.Text;
+            DataTable temp = dtLawOffice.Clone();
+            if (textBoxLawOfficeSearch.Text != "" && comboBoxLawOfficeFields.SelectedIndex > -1)
+            {
+                foreach (DataRow row in dtLawOffice.Rows)
+                {
+                    if (row[searchField].ToString().ToUpper().Contains(textBoxLawOfficeSearch.Text.ToUpper()))
+                    {
+                        temp.ImportRow(row);
+                    }
+                }
+                lawOfficeDataGrid.ItemsSource = temp.AsDataView();
+            }
+            else
+            {
+                lawOfficeDataGrid.ItemsSource = dtLawOffice.AsDataView();
+            }
+        }
+
+        private void textBoxEditSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchField = comboBoxEditsFields.Text;
+            DataTable temp = dtEdit.Clone();
+            if (textBoxEditSearch.Text != "" && comboBoxEditsFields.SelectedIndex > -1)
+            {
+                foreach (DataRow row in dtEdit.Rows)
+                {
+                    if (row[searchField].ToString().ToUpper().Contains(textBoxEditSearch.Text.ToUpper()))
+                    {
+                        temp.ImportRow(row);
+                    }
+                }
+                editsDataGrid.ItemsSource = temp.AsDataView();
+            }
+            else
+            {
+                editsDataGrid.ItemsSource = dtEdit.AsDataView();
             }
         }
     }

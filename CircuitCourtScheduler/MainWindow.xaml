@@ -41,7 +41,7 @@
                     </DataGrid>
                     <GroupBox x:Name="groupBoxStaffSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
-                            <TextBox x:Name="textBoxStaffSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
+                            <TextBox x:Name="textBoxStaffSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102" TextChanged="textBoxStaffSearch_TextChanged"/>
                             <ComboBox x:Name="comboBoxStaffFields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
                         </Grid>
                     </GroupBox>
@@ -59,7 +59,7 @@
                     </DataGrid>
                     <GroupBox x:Name="groupBoxDefenderSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
-                            <TextBox x:Name="textBoxDefenderSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
+                            <TextBox x:Name="textBoxDefenderSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102" TextChanged="textBoxDefenderSearch_TextChanged"/>
                             <ComboBox x:Name="comboBoxDefenderFields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
                         </Grid>
                     </GroupBox>
@@ -77,7 +77,7 @@
                     </DataGrid>
                     <GroupBox x:Name="groupBoxLawOfficeSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
-                            <TextBox x:Name="textBoxLawOfficeSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
+                            <TextBox x:Name="textBoxLawOfficeSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102" TextChanged="textBoxLawOfficeSearch_TextChanged"/>
                             <ComboBox x:Name="comboBoxLawOfficeFields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
                         </Grid>
                     </GroupBox>
@@ -94,7 +94,7 @@
                     </DataGrid>
                     <GroupBox x:Name="groupBoxEditSearch" Header="Search" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="122" Width="134">
                         <Grid>
-                            <TextBox x:Name="textBoxEditSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102"/>
+                            <TextBox x:Name="textBoxEditSearch"  HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="102" TextChanged="textBoxEditSearch_TextChanged"/>
                             <ComboBox x:Name="comboBoxEditsFields" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" Width="102"/>
                         </Grid>
                     </GroupBox>

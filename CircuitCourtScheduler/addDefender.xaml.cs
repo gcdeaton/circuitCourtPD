@@ -45,7 +45,7 @@ namespace CircuitCourtScheduler
             query.SetSqlCommand("INSERT INTO DefendersTable(FIRSTNAME,LASTNAME,LAWOFFICE,EMAIL,CONTACT,ACTIVATED) VALUES(@FirstName,@LastName, @LawOffice, @Email, @Contact, @Activated)");
             query.AddQueryParameters("@FirstName", textBoxFirstName.Text);
             query.AddQueryParameters("@LastName", textBoxLastName.Text);
-            query.AddQueryParameters("@LawOffice", comboBoxLawOffices.SelectedItem.ToString());
+            query.AddQueryParameters("@LawOffice", comboBoxLawOffices.Text);
             query.AddQueryParameters("@Email", textBoxEmail.Text);
             query.AddQueryParameters("@Contact", textBoxPhoneNumber.Text);
             query.AddQueryParameters("@Activated", true);
