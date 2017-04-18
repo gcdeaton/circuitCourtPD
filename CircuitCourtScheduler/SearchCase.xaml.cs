@@ -75,5 +75,28 @@ namespace CircuitCourtScheduler
             populateCaseData();
 
         }
+
+        private void textBoxCaseSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string searchField = comboBoxCasefields.Text;
+            DataTable temp = dtCase.Clone();
+            if (textBoxCaseSearch.Text != "" && comboBoxCasefields.SelectedIndex > -1)
+            {
+                foreach (DataRow row in dtCase.Rows)
+                {
+                    if (row[searchField].ToString().ToUpper().Contains(textBoxCaseSearch.Text.ToUpper()))
+                    {
+                        temp.ImportRow(row);
+                    }
+                }
+                caseDataGrid.ItemsSource = temp.AsDataView();
+            }
+            else
+            {
+                caseDataGrid.ItemsSource = dtCase.AsDataView();
+            }
+
+
+        }
     }
 }
