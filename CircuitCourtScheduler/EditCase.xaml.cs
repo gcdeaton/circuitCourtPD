@@ -40,7 +40,8 @@ namespace CircuitCourtScheduler
 
             textBoxCaseNumber.Text = caseNumber;
             textBoxLitigant.Text = litigant;
-            datePickerHearing.SelectedDate = dateOf;
+            datePickerHearing.SelectedDate = dateOf;    
+
             XmlDocument doc = new XmlDocument();
             XmlNodeList nodeList;
             FileStream fs = new FileStream("C:\\Users\\Gabe\\Source\\Repos\\circuitCourtPD\\CircuitCourtScheduler\\CaseTypes.xml", FileMode.Open, FileAccess.Read);
@@ -77,9 +78,11 @@ namespace CircuitCourtScheduler
                 ComboBoxItem cbi = new ComboBoxItem();
                 cbi.Content = row["FIRSTNAME"].ToString() + " " + row["LASTNAME"].ToString();
                 comboBoxDefenders.Items.Add(cbi);
+                if (cbi.Content.Equals(defender))
+                {
+                    comboBoxDefenders.SelectedItem = cbi;
+                }
             }
-
-
         }
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
@@ -92,14 +95,8 @@ namespace CircuitCourtScheduler
             updateQuery.Connect();
             updateQuery.ExecuteNonQuery();
             updateQuery.Disconnect();
-            
-            //DatabaseQueries.Queries insertQuery = new DatabaseQueries.Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
-            //insertQuery.SetSqlCommand("INSERT INTO EditedTable(CASENUMBER,USERNAME,REASON,DATEOFCHANGE,IDENTIFIER) VALUES(@CaseNumber,@UserName, @Reason, @DateOfChange, @Identifier)");
-            //insertQuery.AddQueryParameters("@CaseNumber",);
-            //insertQuery.AddQueryParameters("@UserName",);
-            //insertQuery.AddQueryParameters("@Reason",);
-            //insertQuery.AddQueryParameters("@DateOfChange", DateTime.Today);
-            //insertQuery.AddQueryParameters("@Identifier",);
+
+            this.Close();
             
         }
 

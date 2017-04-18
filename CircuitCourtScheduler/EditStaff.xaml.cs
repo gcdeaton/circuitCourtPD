@@ -19,9 +19,24 @@ namespace CircuitCourtScheduler
     /// </summary>
     public partial class EditStaff : Window
     {
-        public EditStaff()
+        private string firstName;
+        private string lastName;
+        private string email;
+        private DateTime dateAdded;
+
+
+
+        public EditStaff(string firstName,string lastName,string email, DateTime dateAdded)
         {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.dateAdded = dateAdded;
+
             InitializeComponent();
+
+
+
         }
 
         private void buttonAddStaff_Click(object sender, RoutedEventArgs e)

@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using DatabaseQueries;
 using System.Data;
 
@@ -106,6 +95,11 @@ namespace CircuitCourtScheduler
 
         private void logOutItem_Click(object sender, RoutedEventArgs e)
         {
+            
+            Login loginWindow = new Login();
+            loginWindow.Show();
+            LoginClass.email = "";
+            this.Close();
 
         }
 
@@ -116,7 +110,8 @@ namespace CircuitCourtScheduler
 
         private void editCase_Click(object sender, RoutedEventArgs e)
         {
-
+            SearchCase searchCaseWindow = new SearchCase();
+            searchCaseWindow.ShowDialog();
         }
 
         private void editStaff_Click(object sender, RoutedEventArgs e)
@@ -295,13 +290,14 @@ namespace CircuitCourtScheduler
             string defender = dr.ItemArray[4].ToString();
 
             EditCase editWindow = new EditCase(caseNumber,litigant,caseType,dateOf,defender);
-            editWindow.Show();
+            editWindow.ShowDialog();
 
 
         }
         
         private void Window_Activated(object sender, EventArgs e)
         {
+            
             populateCaseData();
             populateDefenderData();
             populateEditsData();
@@ -309,6 +305,42 @@ namespace CircuitCourtScheduler
             populateStaffData();
          
         }
-    }
 
+
+        private void defenderRow_DoubleClick(object sender, EventArgs e)
+        {
+            int rowIndex = defenderDataGrid.SelectedIndex;
+            var row = (DataGridRow)defenderDataGrid.ItemContainerGenerator.ContainerFromItem(defenderDataGrid.SelectedItem);
+            DataRowView drv = (DataRowView)row.Item;
+            DataRow dr = (DataRow)drv.Row;
+            string firstName = dr.ItemArray[0].ToString();
+            string lastName = dr.ItemArray[1].ToString();
+            string lawOffice = dr.ItemArray[2].ToString();
+            string phoneNumber = dr.ItemArray[3].ToString();
+
+            EditDefender defenderWindow = new EditDefender(firstName, lastName, lawOffice, phoneNumber);
+            defenderWindow.ShowDialog();
+        }
+
+
+        private void staffRow_DoubleClick(object sender, EventArgs e)
+        {
+            int rowIndex = staffDataGrid.SelectedIndex;
+            var row = (DataGridRow)staffDataGrid.ItemContainerGenerator.ContainerFromItem(staffDataGrid.SelectedItem);
+            DataRowView drv = (DataRowView)row.Item;
+            DataRow dr = (DataRow)drv.Row;
+            string firstName = dr.ItemArray[0].ToString();
+            string lastName = dr.ItemArray[1].ToString();
+            string lawOffice = dr.ItemArray[2].ToString();
+            string phoneNumber = dr.ItemArray[3].ToString();
+
+            //EditStaff staffWindow = new EditStaff(firstName, lastName, email, dateAdded);
+            //staffWindow.ShowDialog();
+        }
+
+        private void lawOfficeRow_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

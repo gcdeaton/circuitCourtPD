@@ -19,21 +19,38 @@ namespace CircuitCourtScheduler
     /// </summary>
     public partial class EditDefender : Window
     {
-        public EditDefender()
-        {
-            InitializeComponent();
-        }
+        private string firstName;
+        private string lastName;
+        private string lawOffice;
+        private string phoneNumber;
 
+        public EditDefender(string firstName, string lastName, string lawOffice, string phoneNumber)
+        {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.lawOffice = lawOffice;
+            this.phoneNumber = phoneNumber;
+            InitializeComponent();
+
+        }
 
 
         private void buttonSubmit_Click(object sender, RoutedEventArgs e)
         {
 
+
+
+
+
+
+
+
+            this.Close();
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

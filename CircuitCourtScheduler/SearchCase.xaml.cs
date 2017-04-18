@@ -26,6 +26,7 @@ namespace CircuitCourtScheduler
         public SearchCase()
         {
             InitializeComponent();
+            populateCaseData();
         }
 
 
@@ -58,9 +59,11 @@ namespace CircuitCourtScheduler
             query.SetSqlCommand("SELECT * FROM SelectAllCases");
             query.Connect();
             dtCase = query.RunSelectQuery();
+            query.Disconnect();
+
             dv = dtCase.AsDataView();
             caseDataGrid.ItemsSource = dv;
-            query.Disconnect();
+            
 
             foreach (DataColumn col in dtCase.Columns)
             {
@@ -72,7 +75,7 @@ namespace CircuitCourtScheduler
 
         private void Window_Activated(object sender, EventArgs e)
         {
-            populateCaseData();
+            
 
         }
 
