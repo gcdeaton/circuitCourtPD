@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DatabaseQueries;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,8 @@ namespace CircuitCourtScheduler
     /// </summary>
     public partial class SearchCase : Window
     {
+        private DataTable dtCase;
+        private DataView dv;
         public SearchCase()
         {
             InitializeComponent();
@@ -27,11 +31,48 @@ namespace CircuitCourtScheduler
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void buttonConfirm_Click(object sender, RoutedEventArgs e)
         {
+            int rowIndex = caseDataGrid.SelectedIndex;
+
+            var row = (DataGridRow)caseDataGrid.ItemContainerGenerator.ContainerFromItem(caseDataGrid.SelectedItem);
+            DataRowView drv = (DataRowView)row.Item;
+            DataRow dr = (DataRow)drv.Row;
+            string caseNumber = dr.ItemArray[0].ToString();
+            string litigant = dr.ItemArray[1].ToString();
+            string caseType = dr.ItemArray[2].ToString();
+            DateTime dateOf = (DateTime)dr.ItemArray[3];
+            string defender = dr.ItemArray[4].ToString();
+
+            EditCase editWindow = new EditCase(caseNumber, litigant, caseType, dateOf, defender);
+            editWindow.Show();
+            this.Close();
+        }
+
+        private void populateCaseData()
+        {
+            Queries query = new Queries(new System.Data.SqlClient.SqlConnection("Data Source=GABE-PC\\SQLEXPRESS;Initial Catalog=PublicDefenders;Integrated Security=True"));
+            query.SetSqlCommand("SELECT * FROM SelectAllCases");
+            query.Connect();
+            dtCase = query.RunSelectQuery();
+            dv = dtCase.AsDataView();
+            caseDataGrid.ItemsSource = dv;
+            query.Disconnect();
+
+            foreach (DataColumn col in dtCase.Columns)
+            {
+                ComboBoxItem cbi = new ComboBoxItem();
+                cbi.Content = col.ColumnName;
+                comboBoxCasefields.Items.Add(cbi);
+            }
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            populateCaseData();
 
         }
     }
